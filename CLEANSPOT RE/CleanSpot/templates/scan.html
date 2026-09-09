@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}Scan Waste{% endblock %}
+{% block content %}
+<div class="container py-5">
+    <div class="card shadow-sm mx-auto scan-card">
+        <div class="card-body p-4">
+            <h1>📷 Scan Waste</h1>
+            <p class="text-muted">Upload a clear image. OpenCV prepares the image and the ML model predicts a waste category.</p>
+            <form action="{{ url_for('predict') }}" method="POST" enctype="multipart/form-data">
+                <input type="file" name="image" class="form-control mb-3" accept="image/png,image/jpeg" required>
+                <button class="btn btn-success btn-lg">Analyze Waste</button>
+            </form>
+            <div class="alert alert-info mt-4 mb-0">
+                The prediction is only a suggestion. Always verify the item before disposal.
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}CleanSpot - Home{% endblock %}
+{% block content %}
+<section class="hero py-5">
+    <div class="container py-5">
+        <div class="row align-items-center">
+            <div class="col-lg-7">
+                <span class="badge bg-success-subtle text-success mb-3">Environmental Computing Project</span>
+                <h1 class="display-4 fw-bold">Cleaner choices start with knowing where waste belongs.</h1>
+                <p class="lead">CleanSpot helps users learn waste categories, scan waste images, and report improper waste segregation.</p>
+                <a class="btn btn-success btn-lg me-2" href="{{ url_for('checker') }}">Check Waste</a>
+                <a class="btn btn-outline-success btn-lg" href="{{ url_for('scan') }}">Scan Waste</a>
+            </div>
+            <div class="col-lg-5">
+                <div class="card shadow-sm p-4 mt-4 mt-lg-0">
+                    <h4>How CleanSpot works</h4>
+                    <ol class="mb-0">
+                        <li>Identify the waste.</li>
+                        <li>Check its category.</li>
+                        <li>Scan an image with ML.</li>
+                        <li>Report improper segregation.</li>
+                        <li>Collect environmental data.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

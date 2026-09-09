@@ -1,0 +1,24 @@
+body {
+    background: #f7faf7;
+}
+
+.hero {
+    background: linear-gradient(135deg, #eaf7ed, #ffffff);
+}
+
+.scan-card {
+    max-width: 650px;
+}
+
+.form-card {
+    max-width: 800px;
+}
+
+.result-image {
+    max-height: 350px;
+    object-fit: contain;
+}
+
+footer {
+    background: #ffffff;
+}
