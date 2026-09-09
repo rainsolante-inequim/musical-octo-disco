@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}Report Waste{% endblock %}
+{% block content %}
+<div class="container py-5">
+    <div class="card shadow-sm mx-auto form-card">
+        <div class="card-body p-4">
+            <h1>Report Improper Waste Segregation</h1>
+            <p class="text-muted">Help collect information about local waste-management concerns.</p>
+            <form method="POST" enctype="multipart/form-data">
+                <label class="form-label">Waste Type</label>
+                <input name="waste_type" class="form-control mb-3" placeholder="Example: mixed plastic and food waste" required>
+
+                <label class="form-label">Location</label>
+                <input name="location" class="form-control mb-3" placeholder="Example: School canteen" required>
+
+                <label class="form-label">Description</label>
+                <textarea name="description" class="form-control mb-3" rows="4" placeholder="Describe the situation"></textarea>
+
+                <label class="form-label">Photo (optional)</label>
+                <input type="file" name="image" class="form-control mb-3" accept="image/png,image/jpeg">
+
+                <button class="btn btn-success">Submit Report</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

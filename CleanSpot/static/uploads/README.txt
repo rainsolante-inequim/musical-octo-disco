@@ -1,0 +1,1 @@
+Uploaded images are stored here by the Flask application.
